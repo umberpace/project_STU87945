@@ -17,8 +17,16 @@
   },
   "defaults": {
     "build": {
-      "args": "",
-      "packtool": ""
+      "packtool": "vessel sources"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "ephemeral"
     }
   },
   "output_env_file": ".env",

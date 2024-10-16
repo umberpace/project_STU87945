@@ -9,6 +9,9 @@ dotenv.config({ path: '../../.env' });
 export default defineConfig({
   build: {
     emptyOutDir: true,
+    rollupOptions: {
+      external: ['tweetnacl', 'tweetnacl-util'], // Externalize both tweetnacl and tweetnacl-util
+    },
   },
   optimizeDeps: {
     esbuildOptions: {
